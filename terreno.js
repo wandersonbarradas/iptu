@@ -30,8 +30,14 @@ class calculoVenal {
     } else {
       let titulo = "Atenção";
       let mensagem = `<h6 class="text-capitalize">${titulo}</h6> Por favor, preencha todos os campos.`;
-      divMensagemErro.innerHTML = mensagem;
-      alertErro.style.display = "flex";
+      modalAlert(
+        alert,
+        containerErro,
+        mensagem,
+        divMensagem,
+        "alert-info",
+        "alert-danger",
+      );
     }
   }
 
