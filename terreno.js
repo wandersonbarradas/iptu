@@ -18,7 +18,7 @@ class terreno {
   }
 }
 
-class calculoVenal {
+class calculoVenalTerreno {
   constructor() {
     this.terreno = null;
   }
@@ -83,10 +83,9 @@ class calculoVenal {
   }
 }
 
-const valorVenal = new calculoVenal();
+const valorVenalTerreno = new calculoVenalTerreno();
 
 btnCalcular.addEventListener("click", () => {
   event.preventDefault();
-  valorVenal.calcular();
-  console.log(valorVenal.terreno);
+  valorVenalTerreno.calcular();
 });

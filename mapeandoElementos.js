@@ -21,6 +21,32 @@ const btnCalcular = el("#btnCalcular");
 const spanValorVenal = el("#valorVenal");
 const btnCloseErro = el("#btn-close-erro");
 const containerErro = el("#container-alert");
+const inputAreaEdificada = el("#area-edificada");
+const infoAreaEdificada = el("#infoAreaEdificada");
+const selectTipoEdificada = el("#tipoEdificacao");
+const infoTipoEdificada = el("#infoTipoEdificacao");
+const selectRevestimentoExterno = el("#revestimentoExterno");
+const infoRevestimentoExterno = el("#infoRevestimentoExterno");
+const selectPisoEdificada = el("#pisoEdificacao");
+const infoPisoEdificada = el("#infoPisoEdificacao");
+const selectForroEdificada = el("#forroEdificacao");
+const infoForroEdificada = el("#infoForroEdificacao");
+const selectCoberturaEdificada = el("#coberturaEdificacao");
+const infoCoberturaEdificada = el("#infoCoberturaEdificacao");
+const selectEstruturaEdificada = el("#estruturaEdificacao");
+const infoEstruturaEdificada = el("#infoEstruturaEdificacao");
+const selectInstalacaoSanitaria = el("#instalacaoSanitaria");
+const infoInstalacaoSanitaria = el("#infoInstalacaoSanitaria");
+const selectInstalacaoEletrica = el("#instalacaoEletrica");
+const infoInstalacaoEletrica = el("#infoInstalacaoEletrica");
+const selectPosicaoEdificada = el("#posicaoEdificada");
+const infoPosicaoEdificada = el("#infoPosicaoEdificada");
+const selectConservacaoEdificada = el("#conservacaoEdificada");
+const infoConservacaoEdificada = el("#infoConservacaoEdificada");
+const btnCalculoEdificada = el("#btnCalcularEdificada");
+const spanValorVenalEdificada = el("#valorVenalEdificada");
+const spanTotalPontos = el("#totaldepontos");
+
 infoArea.addEventListener("click", () => {
   let titulo = infoArea.parentNode;
   let mensagem = `<h6 class="text-capitalize">${titulo.textContent}</h6> Digite a area do total do Terreno`;
@@ -105,7 +131,138 @@ infoTopografia.addEventListener("click", () => {
     "alert-info",
   );
 });
-
+infoAreaEdificada.addEventListener("click", () => {
+  let titulo = infoAreaEdificada.parentNode;
+  let mensagem = `<h6 class="text-capitalize">${titulo.textContent}</h6> Digite qual a área da edificação em m².`;
+  modalAlert(
+    alert,
+    containerErro,
+    mensagem,
+    divMensagem,
+    "alert-danger",
+    "alert-info",
+  );
+});
+infoTipoEdificada.addEventListener("click", () => {
+  let titulo = infoTipoEdificada.parentNode;
+  let mensagem = `<h6 class="text-capitalize">${titulo.textContent}</h6> Selecione qual é o tipo da edificação.`;
+  modalAlert(
+    alert,
+    containerErro,
+    mensagem,
+    divMensagem,
+    "alert-danger",
+    "alert-info",
+  );
+});
+infoRevestimentoExterno.addEventListener("click", () => {
+  let titulo = infoRevestimentoExterno.parentNode;
+  let mensagem = `<h6 class="text-capitalize">${titulo.textContent}</h6> Selecione qual é o revestimento externo da edificação.`;
+  modalAlert(
+    alert,
+    containerErro,
+    mensagem,
+    divMensagem,
+    "alert-danger",
+    "alert-info",
+  );
+});
+infoPisoEdificada.addEventListener("click", () => {
+  let titulo = infoPisoEdificada.parentNode;
+  let mensagem = `<h6 class="text-capitalize">${titulo.textContent}</h6> Selecione qual é o piso da edificação.`;
+  modalAlert(
+    alert,
+    containerErro,
+    mensagem,
+    divMensagem,
+    "alert-danger",
+    "alert-info",
+  );
+});
+infoForroEdificada.addEventListener("click", () => {
+  let titulo = infoForroEdificada.parentNode;
+  let mensagem = `<h6 class="text-capitalize">${titulo.textContent}</h6> Selecione qual é o forro da edificação.`;
+  modalAlert(
+    alert,
+    containerErro,
+    mensagem,
+    divMensagem,
+    "alert-danger",
+    "alert-info",
+  );
+});
+infoCoberturaEdificada.addEventListener("click", () => {
+  let titulo = infoCoberturaEdificada.parentNode;
+  let mensagem = `<h6 class="text-capitalize">${titulo.textContent}</h6> Selecione qual é o tipo de cobertura da edificação.`;
+  modalAlert(
+    alert,
+    containerErro,
+    mensagem,
+    divMensagem,
+    "alert-danger",
+    "alert-info",
+  );
+});
+infoEstruturaEdificada.addEventListener("click", () => {
+  let titulo = infoEstruturaEdificada.parentNode;
+  let mensagem = `<h6 class="text-capitalize">${titulo.textContent}</h6> Selecione qual é o tipo de estrutura da edificação.`;
+  modalAlert(
+    alert,
+    containerErro,
+    mensagem,
+    divMensagem,
+    "alert-danger",
+    "alert-info",
+  );
+});
+infoInstalacaoSanitaria.addEventListener("click", () => {
+  let titulo = infoInstalacaoSanitaria.parentNode;
+  let mensagem = `<h6 class="text-capitalize">${titulo.textContent}</h6> Selecione qual é o tipo de instação sanitária da edificação.`;
+  modalAlert(
+    alert,
+    containerErro,
+    mensagem,
+    divMensagem,
+    "alert-danger",
+    "alert-info",
+  );
+});
+infoInstalacaoEletrica.addEventListener("click", () => {
+  let titulo = infoInstalacaoEletrica.parentNode;
+  let mensagem = `<h6 class="text-capitalize">${titulo.textContent}</h6> Selecione qual é o tipo de instação elétrica da edificação.`;
+  modalAlert(
+    alert,
+    containerErro,
+    mensagem,
+    divMensagem,
+    "alert-danger",
+    "alert-info",
+  );
+});
+infoPosicaoEdificada.addEventListener("click", () => {
+  let titulo = infoPosicaoEdificada.parentNode;
+  let mensagem = `<h6 class="text-capitalize">${titulo.textContent}</h6> Selecione qual é a posição da edificação.`;
+  modalAlert(
+    alert,
+    containerErro,
+    mensagem,
+    divMensagem,
+    "alert-danger",
+    "alert-info",
+  );
+});
+infoConservacaoEdificada.addEventListener("click", () => {
+  let titulo = infoConservacaoEdificada.parentNode;
+  let mensagem = `<h6 class="text-capitalize">${titulo.textContent}</h6> Selecione qual é o estado de conservação da edificação.`;
+  modalAlert(
+    alert,
+    containerErro,
+    mensagem,
+    divMensagem,
+    "alert-danger",
+    "alert-info",
+  );
+});
 function modalAlert(divAlert, containerAlert, mensagem, divMens, remove, add) {
   divAlert.classList.remove(remove);
   divAlert.classList.add(add);

@@ -105,7 +105,7 @@
         </div>
       </div>
     </div>
-    <div class="mt-3 card">
+    <div class="mt-5 card">
       <div class="card-header bg-dark">
         <h5 class="text-light">Calculo do Valor Venal da Edificação</h5>
       </div>
@@ -118,7 +118,7 @@
               <input type="number" class="form-control" name="area-edificada" id="area-edificada" placeholder="80" required>
             </div>
             <div class="col-lg-3 col-md-6 mb-2">
-              <label for="tipoEdificacao" class="d-flex justify-content-between form-label">Tipo de Edificação<i id="infotipoEdificacao" class="text-info bi bi-exclamation-diamond"></i></label>
+              <label for="tipoEdificacao" class="d-flex justify-content-between form-label">Tipo de Edificação<i id="infoTipoEdificacao" class="text-info bi bi-exclamation-diamond"></i></label>
               <select name="tipoEdificacao" id="tipoEdificacao" class="form-select" required>
                 <option disabled selected>Selecione</option>
                 <option value="61">Casa</option>
@@ -130,71 +130,111 @@
                 <option value="91">Outros</option>
               </select>
             </div>
-
-
-
-
-
-
-
-
-
             <div class="col-lg-3 col-md-6 mb-2">
-              <label for="valor-base-terreno" class="d-flex justify-content-between form-label">Valor base do m² <i id="infoValorBase" class="text-info bi bi-exclamation-diamond"></i></label>
-              <input type="number" class="form-control" name="valor-base-terreno" id="valor-base-terreno" placeholder="R$ 100" required>
+              <label for="revestimentoExterno" class="d-flex justify-content-between form-label">Revestimento Externo<i id="infoRevestimentoExterno" class="text-info bi bi-exclamation-diamond"></i></label>
+              <select name="revestimentoExterno" id="revestimentoExterno" class="form-select" required>
+                <option disabled selected>Selecione</option>
+                <option value="23">Óleo</option>
+                <option value="17">Caiação</option>
+                <option value="15">Madeira</option>
+                <option value="12">Reboco</option>
+                <option value="20">Cerâmica</option>
+                <option value="20">Outros</option>
+              </select>
             </div>
             <div class="col-lg-3 col-md-6 mb-2">
-              <label for="fator-localizacao-terreno" class="d-flex justify-content-between form-label">Fator de Localização <i id="infoFator" class="text-info bi bi-exclamation-diamond"></i></label>
-              <input type="number" class="form-control" name="fator-localizacao-terreno" id="fator-localizacao-terreno" placeholder="75" required>
+              <label for="pisoEdificacao" class="d-flex justify-content-between form-label">Piso<i id="infoPisoEdificacao" class="text-info bi bi-exclamation-diamond"></i></label>
+              <select name="pisoEdificacao" id="pisoEdificacao" class="form-select" required>
+                <option disabled selected>Selecione</option>
+                <option value="10">Cimento</option>
+                <option value="17">Cerâmica</option>
+                <option value="20">Tabuas e Outros</option>
+              </select>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-2">
+              <label for="forroEdificacao" class="d-flex justify-content-between form-label">Forro<i id="infoForroEdificacao" class="text-info bi bi-exclamation-diamond"></i></label>
+              <select name="forroEdificacao" id="forroEdificacao" class="form-select" required>
+                <option disabled selected>Selecione</option>
+                <option value="3">Madeira, Laje, Estuque e Outros</option>
+              </select>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-2">
+              <label for="coberturaEdificacao" class="d-flex justify-content-between form-label">Cobertura<i id="infoCoberturaEdificacao" class="text-info bi bi-exclamation-diamond"></i></label>
+              <select name="coberturaEdificacao" id="coberturaEdificacao" class="form-select" required>
+                <option disabled selected>Selecione</option>
+                <option value="3">Palha / Zinco</option>
+                <option value="6">Fribo / Cimento</option>
+                <option value="8">Telha</option>
+                <option value="10">Laje</option>
+                <option value="10">Outros</option>
+              </select>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-2">
+              <label for="estruturaEdificacao" class="d-flex justify-content-between form-label">Estrutura<i id="infoEstruturaEdificacao" class="text-info bi bi-exclamation-diamond"></i></label>
+              <select name="estruturaEdificacao" id="estruturaEdificacao" class="form-select" required>
+                <option disabled selected>Selecione</option>
+                <option value="28">Concreto</option>
+                <option value="18">Alvenaria</option>
+                <option value="17">Madeira</option>
+                <option value="26">Metálica</option>
+              </select>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-2">
+              <label for="instalacaoSanitaria" class="d-flex justify-content-between form-label">Instalação Sanitária<i id="infoInstalacaoSanitaria" class="text-info bi bi-exclamation-diamond"></i></label>
+              <select name="instalacaoSanitaria" id="instalacaoSanitaria" class="form-select" required>
+                <option disabled selected>Selecione</option>
+                <option value="2">Externa</option>
+                <option value="3">Interna</option>
+                <option value="4">Mais de uma interna</option>
+              </select>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-2">
+              <label for="instalacaoEletrica" class="d-flex justify-content-between form-label">Instalação Elétrica<i id="infoInstalacaoEletrica" class="text-info bi bi-exclamation-diamond"></i></label>
+              <select name="instalacaoEletrica" id="instalacaoEletrica" class="form-select" required>
+                <option disabled selected>Selecione</option>
+                <option value="8">Aparente</option>
+                <option value="12">Enbutida</option>
+              </select>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-2">
+              <label for="posicaoEdificada" class="d-flex justify-content-between form-label">Posição Edificada<i id="infoPosicaoEdificada" class="text-info bi bi-exclamation-diamond"></i></label>
+              <select name="posicaoEdificada" id="posicaoEdificada" class="form-select" required>
+                <option disabled selected>Selecione</option>
+                <option value="0.90">Isolada / Alinhada</option>
+                <option value="1">Isolada / Recuada</option>
+                <option value="0.70">Geminada / Alinhada</option>
+                <option value="0.80">Geminada / Recuada</option>
+                <option value="0.80">Conjugada / Alinhada</option>
+                <option value="0.90">Conjugada / Recuada</option>
+                <option value="0.80">Superposta / Alinhada</option>
+                <option value="0.90">Superposta / Recuada</option>
+              </select>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-2">
+              <label for="conservacaoEdificada" class="d-flex justify-content-between form-label">Estado de Conservação<i id="infoConservacaoEdificada" class="text-info bi bi-exclamation-diamond"></i></label>
+              <select name="conservacaoEdificada" id="conservacaoEdificada" class="form-select" required>
+                <option disabled selected>Selecione</option>
+                <option value="1">Bom</option>
+                <option value="0.80">Regular</option>
+                <option value="0.50">Ruim</option>
+              </select>
             </div>
           </div>
-          <div class="mt-4 row">
-            <h6 class="card-title">Caracteristicas do terreno</h6>
-            <div class="col-lg-4 col-md-6 mb-2">
-              <label for="situacao-terreno" class="d-flex justify-content-between form-label">Situação <i id="infoSituacao" class="text-info bi bi-exclamation-diamond"></i></label>
-              <select name="situacao-terreno" id="situacao-terreno" class="form-select">
-                <option disabled selected>Selecione</option>
-                <option value="1.10">Esquina</option>
-                <option value="1">Uma frente</option>
-                <option value="0.80">Encravado</option>
-              </select>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-2">
-              <label for="pedologia-terreno" class="d-flex justify-content-between form-label">Pedologia <i id="infoPedologia" class="text-info bi bi-exclamation-diamond"></i></label>
-              <select name="pedologia-terreno" id="pedologia-terreno" class="form-select">
-                <option disabled selected>Selecione</option>
-                <option value="0.60">Alagado</option>
-                <option value="0.70">Inundável</option>
-                <option value="0.80">Rochoso</option>
-                <option value="1">Normal</option>
-                <option value="0.90">Arenoso</option>
-                <option value="0.80">Árido</option>
-              </select>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-2">
-              <label for="topografia-terreno" class="d-flex justify-content-between form-label">Topografia <i id="infoTopografia" class="text-info bi bi-exclamation-diamond"></i></label>
-              <select name="topografia-terreno" id="topografia-terreno" class="form-select" required>
-                <option disabled selected>Selecione</option>
-                <option value="1">Plano</option>
-                <option value="0.80">Aclive</option>
-                <option value="0.80">Declive</option>
-                <option value="0.70">Irregular</option>
-              </select>
-            </div>
-          </div>
-          <button class="mt-2 btn btn-primary" id="btnCalcular">Calcular</button>
+          <button class="mt-2 btn btn-primary" id="btnCalcularEdificada">Calcular</button>
         </form>
       </div>
       <div class="card-footer">
-        <div>
-          <h5 class="">Valor venal do terreno = <span class="text-danger" id="valorVenal">R$ 0</span></h5>
+        <div class="d-flex justify-content-between">
+          <h5 class="">Valor venal da edificação = <span class="text-danger" id="valorVenalEdificada">R$ 0</span></h5>
+          <p>Total de pontos: <span class="text-danger" id="totaldepontos">0</span></p>
         </div>
       </div>
     </div>
   </div>
   <script src="mapeandoElementos.js"></script>
   <script src="terreno.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="edificada.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
 </body>
 
 </html>
