@@ -105,7 +105,92 @@
         </div>
       </div>
     </div>
+    <div class="mt-3 card">
+      <div class="card-header bg-dark">
+        <h5 class="text-light">Calculo do Valor Venal da Edificação</h5>
+      </div>
+      <div class="card-body bg-light">
+        <form>
+          <div class="row">
+            <h6 class="card-title">Special title treatment</h6>
+            <div class="col-lg-3 col-md-6 mb-2">
+              <label for="area-edificada" class="d-flex justify-content-between form-label">Area edificada em m² <i id="infoAreaEdificada" class="text-info bi bi-exclamation-diamond"></i></label>
+              <input type="number" class="form-control" name="area-edificada" id="area-edificada" placeholder="80" required>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-2">
+              <label for="tipoEdificacao" class="d-flex justify-content-between form-label">Tipo de Edificação<i id="infotipoEdificacao" class="text-info bi bi-exclamation-diamond"></i></label>
+              <select name="tipoEdificacao" id="tipoEdificacao" class="form-select" required>
+                <option disabled selected>Selecione</option>
+                <option value="61">Casa</option>
+                <option value="50">Apartamento</option>
+                <option value="20">Telheiro</option>
+                <option value="29">Galpão</option>
+                <option value="40">Indústria</option>
+                <option value="50">Loja</option>
+                <option value="91">Outros</option>
+              </select>
+            </div>
 
+
+
+
+
+
+
+
+
+            <div class="col-lg-3 col-md-6 mb-2">
+              <label for="valor-base-terreno" class="d-flex justify-content-between form-label">Valor base do m² <i id="infoValorBase" class="text-info bi bi-exclamation-diamond"></i></label>
+              <input type="number" class="form-control" name="valor-base-terreno" id="valor-base-terreno" placeholder="R$ 100" required>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-2">
+              <label for="fator-localizacao-terreno" class="d-flex justify-content-between form-label">Fator de Localização <i id="infoFator" class="text-info bi bi-exclamation-diamond"></i></label>
+              <input type="number" class="form-control" name="fator-localizacao-terreno" id="fator-localizacao-terreno" placeholder="75" required>
+            </div>
+          </div>
+          <div class="mt-4 row">
+            <h6 class="card-title">Caracteristicas do terreno</h6>
+            <div class="col-lg-4 col-md-6 mb-2">
+              <label for="situacao-terreno" class="d-flex justify-content-between form-label">Situação <i id="infoSituacao" class="text-info bi bi-exclamation-diamond"></i></label>
+              <select name="situacao-terreno" id="situacao-terreno" class="form-select">
+                <option disabled selected>Selecione</option>
+                <option value="1.10">Esquina</option>
+                <option value="1">Uma frente</option>
+                <option value="0.80">Encravado</option>
+              </select>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-2">
+              <label for="pedologia-terreno" class="d-flex justify-content-between form-label">Pedologia <i id="infoPedologia" class="text-info bi bi-exclamation-diamond"></i></label>
+              <select name="pedologia-terreno" id="pedologia-terreno" class="form-select">
+                <option disabled selected>Selecione</option>
+                <option value="0.60">Alagado</option>
+                <option value="0.70">Inundável</option>
+                <option value="0.80">Rochoso</option>
+                <option value="1">Normal</option>
+                <option value="0.90">Arenoso</option>
+                <option value="0.80">Árido</option>
+              </select>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-2">
+              <label for="topografia-terreno" class="d-flex justify-content-between form-label">Topografia <i id="infoTopografia" class="text-info bi bi-exclamation-diamond"></i></label>
+              <select name="topografia-terreno" id="topografia-terreno" class="form-select" required>
+                <option disabled selected>Selecione</option>
+                <option value="1">Plano</option>
+                <option value="0.80">Aclive</option>
+                <option value="0.80">Declive</option>
+                <option value="0.70">Irregular</option>
+              </select>
+            </div>
+          </div>
+          <button class="mt-2 btn btn-primary" id="btnCalcular">Calcular</button>
+        </form>
+      </div>
+      <div class="card-footer">
+        <div>
+          <h5 class="">Valor venal do terreno = <span class="text-danger" id="valorVenal">R$ 0</span></h5>
+        </div>
+      </div>
+    </div>
   </div>
   <script src="mapeandoElementos.js"></script>
   <script src="terreno.js"></script>
