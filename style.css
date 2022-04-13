@@ -1,0 +1,32 @@
+
+#container-alert {
+  transform: translateY(-100px);
+  transition: all 0.5s ease;
+}
+
+#liveAlertPlaceholder,
+#alertErroCalculo {
+  display: none;
+}
+
+i {
+  cursor: pointer;
+  transition: 0.2s all ease;
+}
+
+.bi:hover {
+  transform: scale(1.5);
+}
+
+.textPontos {
+  text-align: end;
+}
+
+@media (max-width: 500px){
+.textVenalEdifi {
+  font-size: 17px;
+}
+.textPontos {
+  text-align: start;
+}
+}
