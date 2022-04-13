@@ -34,7 +34,7 @@ class calculoVenalEdificada {
     this.cadastro();
     if (this.edificada != null) {
       let valorVenal = this.calculo();
-      spanValorVenalEdificada.innerText = valorVenal;
+      spanValorVenalEdificada.innerText = "R$ " + valorVenal;
     } else {
       let titulo = "Atenção";
       let mensagem = `<h6 class="text-capitalize">${titulo}</h6> Por favor, preencha todos os campos.`;
