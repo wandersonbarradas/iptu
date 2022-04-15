@@ -46,6 +46,14 @@ const infoConservacaoEdificada = el("#infoConservacaoEdificada");
 const btnCalculoEdificada = el("#btnCalcularEdificada");
 const spanValorVenalEdificada = el("#valorVenalEdificada");
 const spanTotalPontos = el("#totaldepontos");
+const selectColeta = el("#coleta");
+const infoColeta = el("#infocoleta");
+const selectCacamento = el("#calcamento");
+const infoCalcamento = el("#infocalcamento");
+const selectLimpeza = el("#limpeza");
+const infoLimpeza = el("#infolimpeza");
+const btnCalculo = el("#btnCalcularTsu");
+const spanTotalTsu = el("#totalTsu");
 
 infoArea.addEventListener("click", () => {
   let titulo = infoArea.parentNode;
