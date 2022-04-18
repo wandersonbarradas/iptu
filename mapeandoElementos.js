@@ -54,7 +54,14 @@ const selectLimpeza = el("#limpeza");
 const infoLimpeza = el("#infolimpeza");
 const btnCalculo = el("#btnCalcularTsu");
 const spanTotalTsu = el("#totalTsu");
-
+const selectUtilizacao = el("#utilizacao");
+const InputValorVenalImovel = el("#valorVenalImovel");
+const inputAliquota = el("#aliquota");
+const inputValorIptu = el("#valorIptu");
+const btnCalcularIptu = el("#btnCalcularIptu");
+const inputValorTsu = el("#valorTsu");
+const inputvalorTotalIptu = el("#valorTotalIptu");
+const spanTotalIptu = el("#totalIptu");
 infoArea.addEventListener("click", () => {
   let titulo = infoArea.parentNode;
   let mensagem = `<h6 class="text-capitalize">${titulo.textContent}</h6> Digite a area do total do Terreno`;

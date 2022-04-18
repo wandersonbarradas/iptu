@@ -1,3 +1,5 @@
+var totalTsu = null;
+const totalTsuValue = 0;
 function calculoTsu() {
   let valorReferencia = 28;
   let aliquotaColeta = 0.2 / 100;
@@ -60,7 +62,7 @@ function calculoTsu() {
     }
   }
 
-  let totalTsu = (totalColeta + totalCacamento + totalLimpeza).toFixed(2);
+  totalTsu = (totalColeta + totalCacamento + totalLimpeza).toFixed(2);
   spanTotalTsu.innerText = "R$ " + totalTsu;
 }
 
