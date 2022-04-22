@@ -1,5 +1,4 @@
 var totalTsu = null;
-const totalTsuValue = 0;
 function calculoTsu() {
   let valorReferencia = 28;
   let aliquotaColeta = 0.2 / 100;
