@@ -30,3 +30,19 @@ i {
   text-align: start;
 }
 }
+
+.erro {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  background-color: #FF0000;
+  color: #FFF;
+  font-weight: bold;
+  padding: 4px;
+  border-radius: 5px;
+}
+
+.erro span {
+  margin-top: -5px;
+  cursor: pointer
+}

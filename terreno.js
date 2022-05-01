@@ -17,28 +17,14 @@ class terreno {
     this.topografia = Number(topografia);
   }
 }
-
 class calculoVenalTerreno {
   constructor() {
     this.terreno = null;
   }
   calcular() {
     this.cadastro();
-    if (this.terreno != null) {
-      let valorVenal = this.calculo();
-      spanValorVenal.innerText = "R$ " + valorVenal;
-    } else {
-      let titulo = "Atenção";
-      let mensagem = `<h6 class="text-capitalize">${titulo}</h6> Por favor, preencha todos os campos.`;
-      modalAlert(
-        alert,
-        containerErro,
-        mensagem,
-        divMensagem,
-        "alert-info",
-        "alert-danger",
-      );
-    }
+    let valorVenal = this.calculo();
+    spanValorVenal.innerText = "R$ " + valorVenal;
   }
 
   cadastro() {
@@ -49,25 +35,15 @@ class calculoVenalTerreno {
     let situacao = selectSituacao.value;
     let pedologia = selectPedologia.value;
     let topografia = selectTopografia.value;
-
-    if (
-      situacao != "Selecione" &&
-      (pedologia != "Selecione") & (topografia != "Selecione") &&
-      area != "" &&
-      testada != "" &&
-      valorBase != "" &&
-      fator != ""
-    ) {
-      this.terreno = new terreno(
-        area,
-        testada,
-        valorBase,
-        fator,
-        situacao,
-        pedologia,
-        topografia,
-      );
-    }
+    this.terreno = new terreno(
+      area,
+      testada,
+      valorBase,
+      fator,
+      situacao,
+      pedologia,
+      topografia,
+    );
   }
 
   calculo() {
@@ -82,10 +58,12 @@ class calculoVenalTerreno {
     return total;
   }
 }
-
 const valorVenalTerreno = new calculoVenalTerreno();
-
-btnCalcular.addEventListener("click", () => {
-  event.preventDefault();
-  valorVenalTerreno.calcular();
+let formTerreno = document.querySelector("#form-terreno");
+formTerreno.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let execultar = Validador.verificar(formTerreno);
+  if (execultar == true) {
+    valorVenalTerreno.calcular();
+  }
 });

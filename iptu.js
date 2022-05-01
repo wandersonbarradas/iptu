@@ -40,90 +40,11 @@ function aliquotaIptu(valor, aliq01, aliq02, aliq03) {
   }
 }
 
-btnCalcularIptu.addEventListener("click", () => {
-  event.preventDefault();
-
-  if (selectUtilizacao.value != "Selecione") {
-    if (selectUtilizacao.value == "1") {
-      if (valorVenalEdificada.edificada == null) {
-        let titulo = "Atenção";
-        let mensagem = `<h6 class="text-capitalize">${titulo}</h6> Para efetuar o calculo de um IPTU Residencial é necessário ter o valor venal da edificação.`;
-        modalAlert(
-          alert,
-          containerErro,
-          mensagem,
-          divMensagem,
-          "alert-info",
-          "alert-danger",
-        );
-      } else {
-        if (valorVenalTerreno.terreno != null) {
-          if (totalTsu != null) {
-            calculoIptu();
-          } else {
-            let titulo = "Atenção";
-            let mensagem = `<h6 class="text-capitalize">${titulo}</h6> Para efetuar o calculo do IPTU é necessário que o calculo do TSU já tenha sido feito.`;
-            modalAlert(
-              alert,
-              containerErro,
-              mensagem,
-              divMensagem,
-              "alert-info",
-              "alert-danger",
-            );
-          }
-        } else {
-          let titulo = "Atenção";
-          let mensagem = `<h6 class="text-capitalize">${titulo}</h6> Para efetuar o calculo do IPTU é necessário ter pelo menos o valor venal do terreno.`;
-          modalAlert(
-            alert,
-            containerErro,
-            mensagem,
-            divMensagem,
-            "alert-info",
-            "alert-danger",
-          );
-        }
-      }
-    } else {
-      if (valorVenalTerreno.terreno != null) {
-        if (totalTsu != null) {
-          calculoIptu();
-        } else {
-          let titulo = "Atenção";
-          let mensagem = `<h6 class="text-capitalize">${titulo}</h6> Para efetuar o calculo do IPTU é necessário que o calculo do TSU já tenha sido feito.`;
-          modalAlert(
-            alert,
-            containerErro,
-            mensagem,
-            divMensagem,
-            "alert-info",
-            "alert-danger",
-          );
-        }
-      } else {
-        let titulo = "Atenção";
-        let mensagem = `<h6 class="text-capitalize">${titulo}</h6> Para efetuar o calculo do IPTU é necessário ter pelo menos o valor venal do terreno.`;
-        modalAlert(
-          alert,
-          containerErro,
-          mensagem,
-          divMensagem,
-          "alert-info",
-          "alert-danger",
-        );
-      }
-    }
-  } else {
-    let titulo = "Atenção";
-    let mensagem = `<h6 class="text-capitalize">${titulo}</h6> Por favor, preencha todos os campos.`;
-    modalAlert(
-      alert,
-      containerErro,
-      mensagem,
-      divMensagem,
-      "alert-info",
-      "alert-danger",
-    );
+let formIptu = document.querySelector("#form-iptu");
+formIptu.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let execultar = Validador.verificar(formIptu);
+  if (execultar == true) {
+    calculoIptu();
   }
 });

@@ -32,21 +32,8 @@ class calculoVenalEdificada {
   }
   start() {
     this.cadastro();
-    if (this.edificada != null) {
-      let valorVenal = this.calculo();
-      spanValorVenalEdificada.innerText = "R$ " + valorVenal;
-    } else {
-      let titulo = "Atenção";
-      let mensagem = `<h6 class="text-capitalize">${titulo}</h6> Por favor, preencha todos os campos.`;
-      modalAlert(
-        alert,
-        containerErro,
-        mensagem,
-        divMensagem,
-        "alert-info",
-        "alert-danger",
-      );
-    }
+    let valorVenal = this.calculo();
+    spanValorVenalEdificada.innerText = "R$ " + valorVenal;
   }
 
   cadastro() {
@@ -61,34 +48,19 @@ class calculoVenalEdificada {
     let instEletrica = selectInstalacaoEletrica.value;
     let posicao = selectPosicaoEdificada.value;
     let conservacao = selectConservacaoEdificada.value;
-
-    if (
-      area != "" &&
-      tipoEdi != "Selecione" &&
-      revsExter != "Selecione" &&
-      piso != "Selecione" &&
-      forro != "Selecione" &&
-      cobertura != "Selecione" &&
-      estrutura != "Selecione" &&
-      instSanitaria != "Selecione" &&
-      instEletrica != "Selecione" &&
-      posicao != "Selecione" &&
-      conservacao != "Selecione"
-    ) {
-      this.edificada = new edificada(
-        area,
-        tipoEdi,
-        revsExter,
-        piso,
-        forro,
-        cobertura,
-        estrutura,
-        instSanitaria,
-        instEletrica,
-        posicao,
-        conservacao,
-      );
-    }
+    this.edificada = new edificada(
+      area,
+      tipoEdi,
+      revsExter,
+      piso,
+      forro,
+      cobertura,
+      estrutura,
+      instSanitaria,
+      instEletrica,
+      posicao,
+      conservacao,
+    );
   }
 
   calculo() {
@@ -117,8 +89,11 @@ class calculoVenalEdificada {
 }
 
 const valorVenalEdificada = new calculoVenalEdificada();
-
-btnCalculoEdificada.addEventListener("click", () => {
-  event.preventDefault();
-  valorVenalEdificada.start();
+let formEdificada = document.querySelector("#form-edificada");
+formEdificada.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let execultar = Validador.verificar(formEdificada);
+  if (execultar == true) {
+    valorVenalEdificada.start();
+  }
 });

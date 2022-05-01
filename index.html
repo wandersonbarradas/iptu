@@ -23,29 +23,29 @@
         <h5 class="m-0 d-flex justify-content-between text-light">Calculo do Valor Venal do Terreno <i class="ms-3 fs-5 text-info bi bi-exclamation-diamond" data-info="Para efetuar o calculo do Valor Venal do Terreno é necessário preencher todos os campos."></i></h5>
       </div>
       <div class="card-body bg-light">
-        <form>
+        <form id="form-terreno">
           <div class="row">
             <h6 class="card-title">Special title treatment</h6>
             <div class="col-lg-3 col-md-6 mb-2">
               <label for="area-terreno" id="area" class="d-flex justify-content-between form-label">Area do terreno em m² <i id="infoArea" class="text-info bi bi-exclamation-diamond" data-info="Digite a area do total do Terreno"></i></label>
-              <input type="number" class="form-control" name="area-terreno" id="area-terreno" placeholder="300" required>
+              <input type="number" class="form-control" name="area-terreno" id="area-terreno" placeholder="300" data-rules="required">
             </div>
             <div class="col-lg-3 col-md-6 mb-2">
               <label for="testada-terreno" class="d-flex justify-content-between form-label">Testada <i id="infoTestada" class="text-info bi bi-exclamation-diamond" data-info="Digite quanto mede a frente do terreno"></i></label>
-              <input type="number" class="form-control" name="testada-terreno" id="testada-terreno" placeholder="10" required>
+              <input type="number" class="form-control" name="testada-terreno" id="testada-terreno" placeholder="10" data-rules="required">
             </div>
             <div class="col-lg-3 col-md-6 mb-2">
               <label for="valor-base-terreno" class="d-flex justify-content-between form-label">Valor base do m² <i id="infoValorBase" class="text-info bi bi-exclamation-diamond" data-info="Digite quanto custa o m² do bairro."></i></label>
-              <input type="number" class="form-control" name="valor-base-terreno" id="valor-base-terreno" placeholder="R$ 100" required>
+              <input type="number" class="form-control" name="valor-base-terreno" id="valor-base-terreno" placeholder="R$ 100" data-rules="required">
             </div>
             <div class="col-lg-3 col-md-6 mb-2">
               <label for="fator-localizacao-terreno" class="d-flex justify-content-between form-label">Fator de Localização <i id="infoFator" class="text-info bi bi-exclamation-diamond" data-info="Digite qual o fator de localização do setor."></i></label>
-              <input type="number" class="form-control" name="fator-localizacao-terreno" id="fator-localizacao-terreno" placeholder="75" required>
+              <input type="number" class="form-control" name="fator-localizacao-terreno" id="fator-localizacao-terreno" placeholder="75" data-rules="required">
             </div>
 
             <div class="col-lg-3 col-md-6 mb-2">
               <label for="situacao-terreno" class="d-flex justify-content-between form-label">Situação <i id="infoSituacao" class="text-info bi bi-exclamation-diamond" data-info="Digite qual a situação do Terreno."></i></label>
-              <select name="situacao-terreno" id="situacao-terreno" class="form-select">
+              <select name="situacao-terreno" id="situacao-terreno" class="form-select" data-rules="select">
                 <option disabled selected>Selecione</option>
                 <option value="1.10">Esquina</option>
                 <option value="1">Uma frente</option>
@@ -54,7 +54,7 @@
             </div>
             <div class="col-lg-3 col-md-6 mb-2">
               <label for="pedologia-terreno" class="d-flex justify-content-between form-label">Pedologia <i id="infoPedologia" class="text-info bi bi-exclamation-diamond" data-info="Digite qual a pedologia do Terreno."></i></label>
-              <select name="pedologia-terreno" id="pedologia-terreno" class="form-select">
+              <select name="pedologia-terreno" id="pedologia-terreno" class="form-select" data-rules="select">
                 <option disabled selected>Selecione</option>
                 <option value="0.60">Alagado</option>
                 <option value="0.70">Inundável</option>
@@ -66,7 +66,7 @@
             </div>
             <div class="col-lg-3 col-md-6 mb-2">
               <label for="topografia-terreno" class="d-flex justify-content-between form-label">Topografia <i id="infoTopografia" class="text-info bi bi-exclamation-diamond" data-info="Digite qual a topografia do Terreno."></i></label>
-              <select name="topografia-terreno" id="topografia-terreno" class="form-select" required>
+              <select name="topografia-terreno" id="topografia-terreno" class="form-select" data-rules="select">
                 <option disabled selected>Selecione</option>
                 <option value="1">Plano</option>
                 <option value="0.80">Aclive</option>
@@ -89,16 +89,16 @@
         <h5 class="m-0 d-flex justify-content-between text-light">Calculo do Valor Venal da Edificação <i class="ms-3 fs-5 text-info bi bi-exclamation-diamond" data-info="Para efetuar o calculo do Valor Venal da Edificação é necessário adicionar pelo menos o terreno."></i></h5>
       </div>
       <div class="card-body bg-light">
-        <form>
+        <form id="form-edificada">
           <div class="row">
             <h6 class="card-title">Special title treatment</h6>
             <div class="col-lg-3 col-md-6 mb-2">
               <label for="area-edificada" class="d-flex justify-content-between form-label">Area edificada em m² <i id="infoAreaEdificada" class="text-info bi bi-exclamation-diamond" data-info="Digite qual a área da edificação em m²"></i></label>
-              <input type="number" class="form-control" name="area-edificada" id="area-edificada" placeholder="80" required>
+              <input type="number" class="form-control" name="area-edificada" id="area-edificada" placeholder="80" data-rules="required">
             </div>
             <div class="col-lg-3 col-md-6 mb-2">
               <label for="tipoEdificacao" class="d-flex justify-content-between form-label">Tipo de Edificação<i id="infoTipoEdificacao" class="text-info bi bi-exclamation-diamond" data-info="Selecione qual é o tipo da edificação."></i></label>
-              <select name="tipoEdificacao" id="tipoEdificacao" class="form-select" required>
+              <select name="tipoEdificacao" id="tipoEdificacao" class="form-select" data-rules="select">
                 <option disabled selected>Selecione</option>
                 <option value="61">Casa</option>
                 <option value="50">Apartamento</option>
@@ -111,7 +111,7 @@
             </div>
             <div class="col-lg-3 col-md-6 mb-2">
               <label for="revestimentoExterno" class="d-flex justify-content-between form-label">Revestimento Externo<i id="infoRevestimentoExterno" class="text-info bi bi-exclamation-diamond" data-info="Selecione qual é o revestimento externo da edificação."></i></label>
-              <select name="revestimentoExterno" id="revestimentoExterno" class="form-select" required>
+              <select name="revestimentoExterno" id="revestimentoExterno" class="form-select" data-rules="select">
                 <option disabled selected>Selecione</option>
                 <option value="0">Inesxistente</option>
                 <option value="23">Óleo</option>
@@ -124,7 +124,7 @@
             </div>
             <div class="col-lg-3 col-md-6 mb-2">
               <label for="pisoEdificacao" class="d-flex justify-content-between form-label">Piso<i id="infoPisoEdificacao" class="text-info bi bi-exclamation-diamond" data-info="Selecione qual é o piso da edificação."></i></label>
-              <select name="pisoEdificacao" id="pisoEdificacao" class="form-select" required>
+              <select name="pisoEdificacao" id="pisoEdificacao" class="form-select" data-rules="select">
                 <option disabled selected>Selecione</option>
                 <option value="10">Cimento</option>
                 <option value="17">Cerâmica</option>
@@ -133,7 +133,7 @@
             </div>
             <div class="col-lg-3 col-md-6 mb-2">
               <label for="forroEdificacao" class="d-flex justify-content-between form-label">Forro<i id="infoForroEdificacao" class="text-info bi bi-exclamation-diamond" data-info="Selecione qual é o forro da edificação."></i></label>
-              <select name="forroEdificacao" id="forroEdificacao" class="form-select" required>
+              <select name="forroEdificacao" id="forroEdificacao" class="form-select" data-rules="select">
                 <option disabled selected>Selecione</option>
                 <option value="0">Inesxistente</option>
                 <option value="3">Madeira, Laje, Estuque e Outros</option>
@@ -141,7 +141,7 @@
             </div>
             <div class="col-lg-3 col-md-6 mb-2">
               <label for="coberturaEdificacao" class="d-flex justify-content-between form-label">Cobertura<i id="infoCoberturaEdificacao" class="text-info bi bi-exclamation-diamond" data-info="Selecione qual é o tipo de cobertura da edificação."></i></label>
-              <select name="coberturaEdificacao" id="coberturaEdificacao" class="form-select" required>
+              <select name="coberturaEdificacao" id="coberturaEdificacao" class="form-select" data-rules="select">
                 <option disabled selected>Selecione</option>
                 <option value="3">Palha / Zinco</option>
                 <option value="6">Fribo / Cimento</option>
@@ -152,7 +152,7 @@
             </div>
             <div class="col-lg-3 col-md-6 mb-2">
               <label for="estruturaEdificacao" class="d-flex justify-content-between form-label">Estrutura<i id="infoEstruturaEdificacao" class="text-info bi bi-exclamation-diamond" data-info="Selecione qual é o tipo de estrutura da edificação."></i></label>
-              <select name="estruturaEdificacao" id="estruturaEdificacao" class="form-select" required>
+              <select name="estruturaEdificacao" id="estruturaEdificacao" class="form-select" data-rules="select">
                 <option disabled selected>Selecione</option>
                 <option value="28">Concreto</option>
                 <option value="18">Alvenaria</option>
@@ -162,7 +162,7 @@
             </div>
             <div class="col-lg-3 col-md-6 mb-2">
               <label for="instalacaoSanitaria" class="d-flex justify-content-between form-label">Instalação Sanitária<i id="infoInstalacaoSanitaria" class="text-info bi bi-exclamation-diamond" data-info="Selecione qual é o tipo de instação sanitária da edificação."></i></label>
-              <select name="instalacaoSanitaria" id="instalacaoSanitaria" class="form-select" required>
+              <select name="instalacaoSanitaria" id="instalacaoSanitaria" class="form-select" data-rules="select">
                 <option disabled selected>Selecione</option>
                 <option value="0">Inesxistente</option>
                 <option value="2">Externa</option>
@@ -172,7 +172,7 @@
             </div>
             <div class="col-lg-3 col-md-6 mb-2">
               <label for="instalacaoEletrica" class="d-flex justify-content-between form-label">Instalação Elétrica<i id="infoInstalacaoEletrica" class="text-info bi bi-exclamation-diamond" data-info="Selecione qual é o tipo de instação elétrica da edificação."></i></label>
-              <select name="instalacaoEletrica" id="instalacaoEletrica" class="form-select" required>
+              <select name="instalacaoEletrica" id="instalacaoEletrica" class="form-select" data-rules="select">
                 <option disabled selected>Selecione</option>
                 <option value="0">Inesxistente</option>
                 <option value="8">Aparente</option>
@@ -181,7 +181,7 @@
             </div>
             <div class="col-lg-3 col-md-6 mb-2">
               <label for="posicaoEdificada" class="d-flex justify-content-between form-label">Posição Edificada<i id="infoPosicaoEdificada" class="text-info bi bi-exclamation-diamond" data-info="Selecione qual é a posição da edificação."></i></label>
-              <select name="posicaoEdificada" id="posicaoEdificada" class="form-select" required>
+              <select name="posicaoEdificada" id="posicaoEdificada" class="form-select" data-rules="select">
                 <option disabled selected>Selecione</option>
                 <option value="0.90">Isolada / Alinhada</option>
                 <option value="1">Isolada / Recuada</option>
@@ -195,7 +195,7 @@
             </div>
             <div class="col-lg-3 col-md-6 mb-2">
               <label for="conservacaoEdificada" class="d-flex justify-content-between form-label">Estado de Conservação<i id="infoConservacaoEdificada" class="text-info bi bi-exclamation-diamond" data-info="Selecione qual é o estado de conservação da edificação."></i></label>
-              <select name="conservacaoEdificada" id="conservacaoEdificada" class="form-select" required>
+              <select name="conservacaoEdificada" id="conservacaoEdificada" class="form-select" data-rules="select">
                 <option disabled selected>Selecione</option>
                 <option value="1">Bom</option>
                 <option value="0.80">Regular</option>
@@ -222,12 +222,12 @@
         <h5 class="m-0 d-flex justify-content-between text-light">Calculo do TSU <i class="ms-3 fs-5 text-info bi bi-exclamation-diamond" data-info="Para efetuar o calculo do TSU é necessário adicionar pelo menos o terreno."></i></h5>
       </div>
       <div class="card-body bg-light">
-        <form>
+        <form id="form-tsu">
           <div class="row">
             <h6 class="card-title">Special title treatment</h6>
             <div class="col-lg-4 col-md-6 mb-2">
               <label for="coleta" class="d-flex justify-content-between form-label">Tem Coleta de Lixo<i id="infocoleta" class="text-info bi bi-exclamation-diamond" data-info="Seu imovel possui coleta de lixo?"></i></label>
-              <select name="coleta" id="coleta" class="form-select" required>
+              <select name="coleta" id="coleta" class="form-select" data-rules="select|edificada">
                 <option disabled selected>Selecione</option>
                 <option value="sim">Sim</option>
                 <option value="nao">Não</option>
@@ -235,7 +235,7 @@
             </div>
             <div class="col-lg-4 col-md-6 mb-2">
               <label for="calcamento" class="d-flex justify-content-between form-label">Tem Calçamento<i id="infocalcamento" class="text-info bi bi-exclamation-diamond" data-info="Sua rua possui calçamento?"></i></label>
-              <select name="calcamento" id="calcamento" class="form-select" required>
+              <select name="calcamento" id="calcamento" class="form-select" data-rules="select|terreno">
                 <option disabled selected>Selecione</option>
                 <option value="sim">Sim</option>
                 <option value="nao">Não</option>
@@ -243,7 +243,7 @@
             </div>
             <div class="col-lg-4 col-md-6 mb-2">
               <label for="limpeza" class="d-flex justify-content-between form-label">Tem Limpeza Pública<i id="infolimpeza" class="text-info bi bi-exclamation-diamond" data-info="Sua rua possui limpeza publica?"></i></label>
-              <select name="limpeza" id="limpeza" class="form-select" required>
+              <select name="limpeza" id="limpeza" class="form-select" data-rules="select|terreno">
                 <option disabled selected>Selecione</option>
                 <option value="sim">Sim</option>
                 <option value="nao">Não</option>
@@ -264,12 +264,12 @@
         <h5 class="m-0 d-flex justify-content-between text-light">Calculo do IPTU <i class="ms-3 fs-5 text-info bi bi-exclamation-diamond" data-info="Para efetuar o calculo do IPTU é necessário adicionar pelo menos o terreno e TSU."></i></h5>
       </div>
       <div class="card-body bg-light">
-        <form>
+        <form id="form-iptu">
           <div class="row">
             <h6 class="card-title">Special title treatment</h6>
             <div class="col-lg-3 col-md-6 mb-2">
               <label for="utilizacao" class="d-flex justify-content-between form-label">Utilização<i id="infoultilizacao" class="text-info bi bi-exclamation-diamond" data-info="Selecione qual é o tipo de utilização deste Imóvel."></i></label>
-              <select name="utilizacao" id="utilizacao" class="form-select" required>
+              <select name="utilizacao" id="utilizacao" class="form-select" data-rules="select|terreno|edificada2|tsu">
                 <option disabled selected>Selecione</option>
                 <option value="1">Residêncial</option>
                 <option value="2">Não Residêncial</option>
@@ -308,11 +308,11 @@
     </div>
   </div>
   <script src="mapeandoElementos.js"></script>
+  <script src="validador.js"></script>
   <script src="terreno.js"></script>
   <script src="edificada.js"></script>
   <script src="tsu.js"></script>
   <script src="iptu.js"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
 </body>
 
 </html>
