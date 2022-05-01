@@ -59,11 +59,35 @@ class calculoVenalTerreno {
   }
 }
 const valorVenalTerreno = new calculoVenalTerreno();
+let validTerreno = false;
 let formTerreno = document.querySelector("#form-terreno");
 formTerreno.addEventListener("submit", (e) => {
   e.preventDefault();
   let execultar = Validador.verificar(formTerreno);
+  validTerreno = true;
   if (execultar == true) {
     valorVenalTerreno.calcular();
   }
 });
+let selectsTerreno = formTerreno.querySelectorAll("select");
+for (let i = 0; i < selectsTerreno.length; i++) {
+  selectsTerreno[i].addEventListener("click", () => {
+    if (validTerreno == true) {
+      let execultar = Validador.verificar(formTerreno);
+      if (execultar == true) {
+        valorVenalTerreno.calcular();
+      }
+    }
+  });
+}
+let imputTerreno = formTerreno.querySelectorAll("input");
+for (let i = 0; i < imputTerreno.length; i++) {
+  imputTerreno[i].addEventListener("keyup", () => {
+    if (validTerreno == true) {
+      let execultar = Validador.verificar(formTerreno);
+      if (execultar == true) {
+        valorVenalTerreno.calcular();
+      }
+    }
+  });
+}

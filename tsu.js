@@ -26,12 +26,24 @@ function calculoTsu() {
   totalTsu = (totalColeta + totalCacamento + totalLimpeza).toFixed(2);
   spanTotalTsu.innerText = "R$ " + totalTsu;
 }
-
+let validTsu = false;
 let formTsu = document.querySelector("#form-tsu");
 formTsu.addEventListener("submit", (e) => {
   e.preventDefault();
   let execultar = Validador.verificar(formTsu);
+  validTsu = true;
   if (execultar == true) {
     calculoTsu();
   }
 });
+let selectsTsu = formTsu.querySelectorAll("select");
+for (let i = 0; i < selectsTsu.length; i++) {
+  selectsTsu[i].addEventListener("click", () => {
+    if (validTsu == true) {
+      let execultar = Validador.verificar(formTsu);
+      if (execultar == true) {
+        calculoTsu();
+      }
+    }
+  });
+}
