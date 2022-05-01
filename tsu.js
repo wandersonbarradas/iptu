@@ -36,14 +36,3 @@ formTsu.addEventListener("submit", (e) => {
     calculoTsu();
   }
 });
-let selectsTsu = formTsu.querySelectorAll("select");
-for (let i = 0; i < selectsTsu.length; i++) {
-  selectsTsu[i].addEventListener("click", () => {
-    if (validTsu == true) {
-      let execultar = Validador.verificar(formTsu);
-      if (execultar == true) {
-        calculoTsu();
-      }
-    }
-  });
-}

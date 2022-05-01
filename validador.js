@@ -1,6 +1,5 @@
 let Validador = {
   verificar: (formElement) => {
-    // e.preventDefault();
     let inputs = formElement.querySelectorAll("input, select");
     Validador.limparError(inputs, formElement);
     let send = true;

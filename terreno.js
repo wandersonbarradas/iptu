@@ -30,8 +30,26 @@ class calculoVenalTerreno {
   cadastro() {
     let area = inputArea.value;
     let testada = inputTestada.value;
-    let valorBase = inputValorBase.value;
-    let fator = inputFator.value;
+    let valorBase = 0;
+    let fator = 0;
+    switch (selectSetor.value) {
+      case "1":
+        valorBase = 320;
+        fator = 45;
+        break;
+      case "2":
+        valorBase = 200;
+        fator = 40;
+        break;
+      case "3":
+        valorBase = 100;
+        fator = 75;
+        break;
+      case "4":
+        valorBase = 50;
+        fator = 80;
+        break;
+    }
     let situacao = selectSituacao.value;
     let pedologia = selectPedologia.value;
     let topografia = selectTopografia.value;
@@ -69,25 +87,3 @@ formTerreno.addEventListener("submit", (e) => {
     valorVenalTerreno.calcular();
   }
 });
-let selectsTerreno = formTerreno.querySelectorAll("select");
-for (let i = 0; i < selectsTerreno.length; i++) {
-  selectsTerreno[i].addEventListener("click", () => {
-    if (validTerreno == true) {
-      let execultar = Validador.verificar(formTerreno);
-      if (execultar == true) {
-        valorVenalTerreno.calcular();
-      }
-    }
-  });
-}
-let imputTerreno = formTerreno.querySelectorAll("input");
-for (let i = 0; i < imputTerreno.length; i++) {
-  imputTerreno[i].addEventListener("keyup", () => {
-    if (validTerreno == true) {
-      let execultar = Validador.verificar(formTerreno);
-      if (execultar == true) {
-        valorVenalTerreno.calcular();
-      }
-    }
-  });
-}
